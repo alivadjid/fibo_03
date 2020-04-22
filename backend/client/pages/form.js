@@ -1,3 +1,5 @@
+
+import axios from "axios";
 class Form extends React.Component {
     constructor(props) {
         super(props);
@@ -11,9 +13,29 @@ class Form extends React.Component {
     }
 
     handleSubmit(event) {
-        var writeNumber = this.state.value;
+        var number = this.state.value;
+        let data = {pp: number};
+        data = JSON.stringify(data);
         
-       console.log(writeNumber);
+        
+        fetch('http://localhost:3001/number', {
+            method: 'post',
+            body:  data,
+            headers: { "Content-Type": "application/json"}
+        }).then(function(responce) {
+            console.log('data submit success');
+        }).catch(function(error) {
+            console.log('got err', error);
+        })
+        /*
+        axios.post('http://localhost:3001/number', {
+            countValue: number
+        }). then((response) => {
+            console.log('data submitted success');
+        }).catch((error) => {
+            console.log('got err', error);
+        });
+        */
         event.preventDefault();
         
     }
