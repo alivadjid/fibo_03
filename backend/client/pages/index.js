@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Nav from './navbar';
 import Form from './form';
+import Getip from './getip';
+
 
 export default function HomePage() {
     return (
@@ -16,6 +18,7 @@ export default function HomePage() {
             <Nav />
             <p> Welcome to fibonachi example</p>
             <Form />
+            
         </div>
     );
 }

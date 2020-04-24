@@ -14,10 +14,22 @@ class Form extends React.Component {
 
     handleSubmit(event) {
         var number = this.state.value;
-        let data = {pp: number};
-        data = JSON.stringify(data);
+        //let data = {pp: number};
+        //data = JSON.stringify(data);
         
-        
+/*
+        axios({
+            method: 'post',
+            url: 'http://localhost:3001/number',
+            body: data
+        })
+            .then(function (responce) {
+                console.log(responce);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        /*
         fetch('http://localhost:3001/number', {
             method: 'post',
             body:  data,
@@ -26,16 +38,21 @@ class Form extends React.Component {
             console.log('data submit success');
         }).catch(function(error) {
             console.log('got err', error);
-        })
-        /*
+        })*/
+        // send do Back and get result
         axios.post('http://localhost:3001/number', {
-            countValue: number
-        }). then((response) => {
-            console.log('data submitted success');
+            body: number
+        }). then((res) => {
+            //console.log(res);
+            //console.log(res.data);
+            let Nnumber = JSON.parse(res.data) ;
+            alert('To: '+ number + ',correscponds: ' + Nnumber + ' ,from Fibbonachi line' );
+            //lam = res;
+            //console.log(lam);
         }).catch((error) => {
             console.log('got err', error);
         });
-        */
+        
         event.preventDefault();
         
     }
