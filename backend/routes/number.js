@@ -9,12 +9,14 @@ var bodyParser= require('body-parser');
 //app.use(bodyParser.json());
 router.post('/', function (req, res) {
   var countValue = req.body;
-  console.log(req);
+ 
   //var countIp = req.bodyIp;
   //console.log(countIp);
   //console.log(req.bodyIp);
   var countIp = req.body.bodyIp;
+  var countDate = req.body.bodyDate
   console.log(countIp);
+  console.log(countDate);
   //var IP = req.bodyIp;
   //console.log(IP);
   //console.log(req.bodyIp);

@@ -23,6 +23,10 @@ class Form extends React.Component {
     
     handleSubmit(event) {
         var number = this.state.value;
+        var date = new Date().toLocaleString('ru-RU');
+        //date1 = new Date().toLocaleString();
+        console.log(date);
+        
         
         //ip.then(alert);
         
@@ -57,8 +61,8 @@ class Form extends React.Component {
         // send do Back and get result
         axios.post('http://localhost:3001/number', {
             body: number,
-            bodyIp: ip
-
+            bodyIp: ip,
+            bodyDate: date
         }). then((res) => {
             //console.log(res);
             //console.log(res.data);
