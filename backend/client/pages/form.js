@@ -1,19 +1,31 @@
-
+import getip from "./getip";
 import axios from "axios";
+//import publicIp from '../node_modules/public-ip';
+
+
 class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {value: ''};
-
+        //var ip = getip()
+        //.then (res =>  { ip = res })
+        //.then (() => console.log(ip));
+        //console.log(ip);
+        //console.log(this.ip);
+        //console.log(typeof ip);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleChange(event) {
         this.setState({value: event.target.value});
     }
-
+  
+    
     handleSubmit(event) {
         var number = this.state.value;
+        
+        //ip.then(alert);
+        
         //let data = {pp: number};
         //data = JSON.stringify(data);
         
@@ -39,19 +51,27 @@ class Form extends React.Component {
         }).catch(function(error) {
             console.log('got err', error);
         })*/
+        
+        
+        getip().then(ip => {
         // send do Back and get result
         axios.post('http://localhost:3001/number', {
-            body: number
+            body: number,
+            bodyIp: ip
+
         }). then((res) => {
             //console.log(res);
             //console.log(res.data);
             let Nnumber = JSON.parse(res.data) ;
-            alert('To: '+ number + ',correscponds: ' + Nnumber + ' ,from Fibbonachi line' );
+            alert('To: '+ number + ',corresponds: ' + Nnumber + ' ,from Fibbonachi line' );
             //lam = res;
             //console.log(lam);
         }).catch((error) => {
             console.log('got err', error);
         });
+        })
+        
+       
         
         event.preventDefault();
         
