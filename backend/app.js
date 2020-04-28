@@ -12,6 +12,23 @@ var app = express();
 
 var cors = require('cors');
 var app = express();
+
+const mysql = require('mysql2');
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'sqlroot',
+  database: 'fibo-sql-data'
+});
+
+connection.connect(function(err){
+  (err)?console.log(err + '++++++++++//////////////'):
+  console.log('connection ████████████] 99%');
+});
+
+require('./routes/sql')(app, connection);
+
+
 app.use (cors());
 
 // view engine setup

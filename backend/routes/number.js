@@ -8,8 +8,8 @@ var bodyParser= require('body-parser');
 // Calculate 
 //app.use(bodyParser.json());
 router.post('/', function (req, res) {
-  var countValue = req.body;
- 
+  var countValue = req.body.body;
+  console.log(countValue);
   //var countIp = req.bodyIp;
   //console.log(countIp);
   //console.log(req.bodyIp);
@@ -20,7 +20,7 @@ router.post('/', function (req, res) {
   //var IP = req.bodyIp;
   //console.log(IP);
   //console.log(req.bodyIp);
-  var Value = Calculate(+countValue.body);
+  var Value = Calculate(+countValue);
     function Calculate(n) {
       if (n == 1) { c = 1 }
       else if ( n== 2) { c = 1}
@@ -37,6 +37,29 @@ router.post('/', function (req, res) {
 
   console.log('CountValue is', Value);
   res.end(JSON.stringify(Value));
+
+  // sql
+  const mysql = require('mysql2');
+  const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'sqlroot',
+  database: 'fibo-sql-data'
+});
+
+const datas = [
+  [countDate, countIp, countValue, Value]
+];
+const sql = `INSERT INTO  data_table(date, ip, number, result) VALUES ?`;
+
+connection.query(sql, [datas],function(err, results) {
+  if(err) console.log(err);
+  console.log(results);
+});
+
+connection.end();
+
+
 });
 
 
