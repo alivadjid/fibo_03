@@ -7,11 +7,20 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var htmlRoutes = require("./routes/number");
+//var sqldata = require('./routes/sqldata');
 
 var app = express();
 
 var cors = require('cors');
-var app = express();
+//var app = express();
+
+app.use(function(req, res, next) { // req - объекту запроса.  объекту ответа (res)
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
+  next(); // Следующая функция промежуточной обработки
+});
+
+
 
 const mysql = require('mysql2');
 const connection = mysql.createConnection({
@@ -27,7 +36,7 @@ connection.connect(function(err){
 });
 
 require('./routes/sql')(app, connection);
-
+//require('./routes/sqldata')(app, connection);
 
 app.use (cors());
 
@@ -44,6 +53,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/number', htmlRoutes);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
