@@ -13,6 +13,9 @@ var app = express();
 
 var cors = require('cors');
 //var app = express();
+var bodyParser= require('body-parser');
+app.use(bodyParser.json());
+
 
 app.use(function(req, res, next) { // req - объекту запроса.  объекту ответа (res)
   res.header("Access-Control-Allow-Origin", "*");
@@ -39,7 +42,6 @@ require('./routes/sql')(app, connection);
 //require('./routes/sqldata')(app, connection);
 
 app.use (cors());
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

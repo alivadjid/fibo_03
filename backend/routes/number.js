@@ -54,7 +54,7 @@ const sql = `INSERT INTO  data_table(date, ip, number, result) VALUES ?`;
 
 connection.query(sql, [datas],function(err, results) {
   if(err) console.log(err);
-  console.log(results);
+  //console.log(results);
 });
 
 connection.end();
