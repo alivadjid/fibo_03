@@ -11,6 +11,9 @@ var htmlRoutes = require("./routes/number");
 
 var app = express();
 
+const session = require('express-session');
+app.use(session({secret: 'mySecret', resave: false, saveUninitialized: false}));
+
 var cors = require('cors');
 //var app = express();
 var bodyParser= require('body-parser');

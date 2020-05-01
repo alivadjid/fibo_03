@@ -59,11 +59,7 @@ class Form extends React.Component {
         
         getip().then(ip => {
         
-        axios.post('http://localhost:3001/sqldata', {
-            sqlIp: ip
-        }).catch((error) => {
-            console.log('take error', error);
-        }); 
+        
         // send do Back and get result
         axios.post('http://localhost:3001/number', {
             body: number,

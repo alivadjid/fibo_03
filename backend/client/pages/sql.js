@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Nav from './navbar';
 import Sqldata from './sqldata';
+import Sendip from './sendip';
 
 export default function sql() {
     return (
@@ -14,7 +15,7 @@ export default function sql() {
         </Head>
         
             <Nav />
-            <p> Here SQL data from your IP</p>
+            <p> Here SQL data from your</p>
             
             <Sqldata />
         </div>

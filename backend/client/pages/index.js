@@ -20,7 +20,7 @@ export default function HomePage() {
             <Nav />
             <p> Welcome to fibonachi example</p>
             <Form />
-            
+                      
         </div>
     );
 }

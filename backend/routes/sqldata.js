@@ -1,3 +1,16 @@
+
+var express = require('express');
+var app = express();
+
+app.use (cors());
+app.use(function(req, res, next) { // req - объекту запроса.  объекту ответа (res)
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
+    next(); // Следующая функция промежуточной обработки
+  });
+
+
+
 /*
 var express = require('express');
 
