@@ -7,26 +7,21 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var htmlRoutes = require("./routes/number");
-//var sqldata = require('./routes/sqldata');
-
+var cors = require('cors');
+var bodyParser= require('body-parser');
 var app = express();
 
 const session = require('express-session');
 app.use(session({secret: 'mySecret', resave: false, saveUninitialized: false}));
 
-var cors = require('cors');
-//var app = express();
-var bodyParser= require('body-parser');
 app.use(bodyParser.json());
 
 
-app.use(function(req, res, next) { // req - объекту запроса.  объекту ответа (res)
+app.use(function(req, res, next) { 
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
-  next(); // Следующая функция промежуточной обработки
+  next(); 
 });
-
-
 
 const mysql = require('mysql2');
 const connection = mysql.createConnection({
@@ -42,10 +37,9 @@ connection.connect(function(err){
 });
 
 require('./routes/sql')(app, connection);
-//require('./routes/sqldata')(app, connection);
 
 app.use (cors());
-// view engine setup
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
