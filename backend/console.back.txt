@@ -1,0 +1,362 @@
+PS D:\Programming\gt\fibo_03\backend> npx eslint --init
+? How would you like to use ESLint? To check syntax and find problems
+? What type of modules does your project use? JavaScript modules (import/export)
+? Which framework does your project use? React
+? Does your project use TypeScript? No
+? Where does your code run? Browser
+? What format do you want your config file to be in? JavaScript
+The config that you've selected requires the following dependencies:
+
+eslint-plugin-react@latest
+? Would you like to install them now with npm? Yes
+Installing eslint-plugin-react@latest
+
+> core-js-pure@3.6.5 postinstall D:\Programming\gt\fibo_03\backend\node_modules\core-js-pure
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+> https://opencollective.com/core-js 
+> https://www.patreon.com/zloirock 
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+npm WARN acorn-jsx@5.2.0 requires a peer of acorn@^6.0.0 || ^7.0.0 but none is installed. You must install peer dependencies yourself.
+
++ eslint-plugin-react@7.19.0
+added 38 packages from 19 contributors and audited 816 packages in 20.372s
+
+28 packages are looking for funding
+  run `npm fund` for details
+
+found 8 vulnerabilities (4 low, 1 moderate, 2 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+Successfully created .eslintrc.js file in D:\Programming\gt\fibo_03\backend
+PS D:\Programming\gt\fibo_03\backend> npx eslint backend
+
+Oops! Something went wrong! :(
+
+ESLint: 6.8.0.
+
+No files matching the pattern "backend" were found.
+Please check for typing mistakes in the pattern.
+
+PS D:\Programming\gt\fibo_03\backend> npx eslint form.js
+
+Oops! Something went wrong! :(
+
+ESLint: 6.8.0.
+
+No files matching the pattern "form.js" were found.
+Please check for typing mistakes in the pattern.
+
+PS D:\Programming\gt\fibo_03\backend> npx eslint
+eslint [options] file.js [file.js] [dir]
+
+Basic configuration:
+  --no-eslintrc                   Disable use of configuration from .eslintrc.*
+  -c, --config path::String       Use this configuration, overriding .eslintrc.* config options if present
+  --env [String]                  Specify environments
+  --ext [String]                  Specify JavaScript file extensions - default: .js
+  --global [String]               Define global variables
+  --parser String                 Specify the parser to be used
+  --parser-options Object         Specify parser options
+  --resolve-plugins-relative-to path::String  A folder where plugins should be resolved from, CWD by default
+
+Specifying rules and plugins:
+  --rulesdir [path::String]       Use additional rules from this directory
+  --plugin [String]               Specify plugins
+  --rule Object                   Specify rules
+
+Fixing problems:
+  --fix                           Automatically fix problems
+  --fix-dry-run                   Automatically fix problems without saving the changes to the file system
+  --fix-type Array                Specify the types of fixes to apply (problem, suggestion, layout)
+
+Ignoring files:
+  --ignore-path path::String      Specify path of ignore file
+  --no-ignore                     Disable use of ignore files and patterns
+  --ignore-pattern [String]       Pattern of files to ignore (in addition to those in .eslintignore)
+
+Using stdin:
+  --stdin                         Lint code provided on <STDIN> - default: false
+  --stdin-filename String         Specify filename to process STDIN as
+
+Handling warnings:
+  --quiet                         Report errors only - default: false
+  --max-warnings Int              Number of warnings to trigger nonzero exit code - default: -1
+
+Output:
+  -o, --output-file path::String  Specify file to write report to
+  -f, --format String             Use a specific output format - default: stylish
+  --color, --no-color             Force enabling/disabling of color
+
+Inline configuration comments:
+  --no-inline-config              Prevent comments from changing config or rules
+  --report-unused-disable-directives  Adds reported errors for unused eslint-disable directives
+
+Caching:
+  --cache                         Only check changed files - default: false
+  --cache-file path::String       Path to the cache file. Deprecated: use --cache-location - default: .eslintcache
+  --cache-location path::String   Path to the cache file or directory
+
+Miscellaneous:
+  --init                          Run config initialization wizard - default: false
+  --env-info                      Output execution environment information - default: false
+  --no-error-on-unmatched-pattern  Prevent errors when pattern is unmatched
+  --debug                         Output debugging information
+  -h, --help                      Show help
+  -v, --version                   Output the version number
+  --print-config path::String     Print the configuration for the given file
+PS D:\Programming\gt\fibo_03\backend> npx eslint [] form.js
+
+Oops! Something went wrong! :(
+
+ESLint: 6.8.0.
+
+No files matching the pattern "[]" were found.
+Please check for typing mistakes in the pattern.
+
+PS D:\Programming\gt\fibo_03\backend> npx eslint form.js
+
+Oops! Something went wrong! :(
+
+ESLint: 6.8.0.
+
+No files matching the pattern "form.js" were found.
+Please check for typing mistakes in the pattern.
+
+PS D:\Programming\gt\fibo_03\backend> npx eslint app.js
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .
+
+D:\Programming\gt\fibo_03\backend\app.js
+   1:19  error  'require' is not defined          no-undef
+   2:15  error  'require' is not defined          no-undef
+   3:12  error  'require' is not defined          no-undef
+   4:20  error  'require' is not defined          no-undef
+   5:14  error  'require' is not defined          no-undef
+   7:19  error  'require' is not defined          no-undef
+   8:19  error  'require' is not defined          no-undef
+   9:18  error  'require' is not defined          no-undef
+  14:17  error  'require' is not defined          no-undef
+  17:12  error  'require' is not defined          no-undef
+  19:17  error  'require' is not defined          no-undef
+  31:15  error  'require' is not defined          no-undef
+  44:1   error  'require' is not defined          no-undef
+  49:28  error  '__dirname' is not defined        no-undef
+  56:34  error  '__dirname' is not defined        no-undef
+  69:33  error  'next' is defined but never used  no-unused-vars
+
+  79:1   error  'module' is not defined           no-undef
+
+? 17 problems (17 errors, 0 warnings)
+
+PS D:\Programming\gt\fibo_03\backend> npx help
+Для получения сведений об определенной команде наберите HELP <имя команды>
+ASSOC          Вывод либо изменение сопоставлений по расширениям имен файлов.
+ATTRIB         Отображение и изменение атрибутов файлов.
+BREAK        Включение и выключение режима обработки комбинации клавиш CTRL+C.
+BCDEDIT        Задает свойства в базе данных загрузки для управления начальной
+               загрузкой.
+CACLS          Отображение и редактирование списков управления доступом (ACL)
+               к файлам.
+CALL           Вызов одного пакетного файла из другого.
+CD             Вывод имени либо смена текущей папки.
+CHCP           Вывод либо установка активной кодовой страницы.
+CHDIR          Вывод имени либо смена текущей папки.
+CHKDSK         Проверка диска и вывод статистики.
+CHKNTFS        Отображение или изменение выполнения проверки диска во время
+               загрузки.
+CLS            Очистка экрана.
+CMD            Запуск еще одного интерпретатора командных строк Windows.
+COLOR       Установка цветов переднего плана и фона, используемых по умолчанию.
+COMP           Сравнение содержимого двух файлов или двух наборов файлов.
+COMPACT        Отображение и изменение сжатия файлов в разделах NTFS.
+CONVERT        Преобразует тома FAT в NTFS. Вы не можете
+               преобразовать текущий диск.
+COPY           Копирование одного или нескольких файлов в другое место.
+DATE           Вывод либо установка текущей даты.
+DEL            Удаление одного или нескольких файлов.
+DIR            Вывод списка файлов и подпапок из указанной папки.
+DISKPART       Отображает или настраивает свойства раздела диска.
+DOSKEY         Редактирует командные строки, повторно вызывает команды Windows и создает
+               макросы.
+DRIVERQUERY    Отображает текущее состояние и свойства драйвера устройства.
+ECHO           Отображает сообщения и переключает режим отображения команд на экране.
+ENDLOCAL       Завершает локализацию изменений среды для пакетного файла.
+ERASE          Удаляет один или несколько файлов.
+EXIT           Завершает работу программы CMD.EXE (интерпретатора командных строк).
+FC             Сравнивает два файла или два набора файлов и
+               отображает различия между ними.
+FIND           Ищет текстовую строку в одном или нескольких файлах.
+FINDSTR        Ищет строки в файлах.
+FOR            Запускает указанную команду для каждого из файлов в наборе.
+FORMAT         Форматирует диск для работы с Windows.
+FSUTIL         Отображает или настраивает свойства файловой системы.
+FTYPE          Отображает либо изменяет типы файлов, используемые при
+               сопоставлении по расширениям имен файлов.
+GOTO           Направляет интерпретатор команд Windows в отмеченную строку
+               пакетной программы.
+GPRESULT       Отображает информацию о групповой политике для компьютера или пользователя.
+GRAFTABL       Позволяет Windows отображать расширенный набор символов в
+               графическом режиме.
+HELP           Выводит справочную информацию о командах Windows.
+ICACLS         Отображает, изменяет, архивирует или восстанавливает
+               списки ACL для файлов и каталогов.
+IF             Выполняет условную обработку в пакетных программах.
+LABEL          Создает, изменяет или удаляет метки тома для дисков.
+MD             Создает каталог.
+MKDIR          Создает каталог.
+MKLINK         Создает символьные ссылки и жесткие связи
+MODE           Настраивает системные устройства.
+MORE           Последовательно отображает данные по частям размером в один экран.
+MOVE           Перемещает один или несколько файлов из одного каталога
+               в другой.
+OPENFILES      Отображает файлы, открытые для файлового ресурса удаленными пользователями.
+PATH           Отображает или устанавливает путь поиска исполняемых файлов.
+PAUSE          Приостанавливает выполнение пакетного файла и выводит сообщение.
+POPD           Восстанавливает предыдущее значение текущего каталога,
+               сохраненное с помощью команды PUSHD.
+PRINT          Выводит на печать содержимое текстового файла.
+PROMPT         Изменяет командную строку Windows.
+PUSHD          Сохраняет текущий каталог, затем изменяет его.
+RD             Удаляет каталог.
+RECOVER        Восстанавливает данные, которые можно прочитать, с плохого или поврежденного диска.
+REM            Записывает комментарии в пакетные файлы или файл CONFIG.SYS.
+REN            Переименовывает файлы.
+RENAME         Переименовывает файлы.
+REPLACE        Заменяет файлы.
+RMDIR          Удаляет каталог.
+ROBOCOPY       Улучшенная служебная программа копирования файлов и деревьев папок
+SET            Показывает, устанавливает или удаляет переменные среды Windows.
+SETLOCAL       Начинает локализацию изменений среды в пакетном файле.
+SC             Отображает или настраивает службы (фоновые процессы).
+SCHTASKS       Выполняет команды и запускает программы на компьютере по расписанию.
+SHIFT          Изменяет положение заменяемых параметров в пакетных файлах.
+SHUTDOWN       Позволяет локально или удаленно завершить работу компьютера.
+SORT           Сортирует ввод.
+START          Выполняет указанную программу или команду в отдельном окне.
+SUBST          Связывает путь с именем диска.
+SYSTEMINFO     Отображает сведения о свойствах и конфигурации определенного компьютера.
+TASKLIST       Отображает все выполняемые задачи, включая службы.
+TASKKILL       Прекращение или остановка процесса либо приложения.
+TIME           Отображает или устанавливает системное время.
+TITLE          Назначает заголовок окна для сеанса CMD.EXE.
+TREE           Графически отображает структуру каталогов диска или
+          пути.
+TYPE           Отображает содержимое текстовых файлов.
+VER            Отображает сведения о версии Windows.
+VERIFY         Устанавливает режим проверки в Windows правильности записи
+               файлов на диск.
+VOL            Отображает метку и серийный номер тома для диска.
+XCOPY          Копирует файлы и деревья папок.
+WMIC           Отображает сведения об инструментарии WMI в интерактивной командной оболочке.
+
+Дополнительные сведения о средствах см. в описании программ командной строки в справке.
+PS D:\Programming\gt\fibo_03\backend> npx eslint --init
+? How would you like to use ESLint? To check syntax and find problems
+? What type of modules does your project use? CommonJS (require/exports)
+? Which framework does your project use? None of these
+? Does your project use TypeScript? No
+? Where does your code run? Browser
+? What format do you want your config file to be in? JavaScript
+Successfully created .eslintrc.js file in D:\Programming\gt\fibo_03\backend
+PS D:\Programming\gt\fibo_03\backend> npx eslint app.js
+
+D:\Programming\gt\fibo_03\backend\app.js
+  49:28  error  '__dirname' is not defined        no-undef
+  56:34  error  '__dirname' is not defined        no-undef
+  69:33  error  'next' is defined but never used  no-unused-vars
+
+? 3 problems (3 errors, 0 warnings)
+
+PS D:\Programming\gt\fibo_03\backend> npx eslint --init
+? How would you like to use ESLint? To check syntax and find problems
+? What type of modules does your project use? JavaScript modules (import/export)
+? Which framework does your project use? (Use arrow keys)
+> React
+  Vue.js
+  None of these PS D:\Programming\gt\fibo_03\backend> npx eslint --init
+? How would you like to use ESLint? To check syntax and find problems
+? What type of modules does your project use? CommonJS (require/exports)
+? Which framework does your project use? None of these
+? Does your project use TypeScript? No
+? Where does your code run? Browser
+? What format do you want your config file to be in? JavaScript
+Successfully created .eslintrc.js file in D:\Programming\gt\fibo_03\backend
+PS D:\Programming\gt\fibo_03\backend> npx eslint app.js
+
+D:\Programming\gt\fibo_03\backend\app.js
+  49:28  error  '__dirname' is not defined        no-undef
+  56:34  error  '__dirname' is not defined        no-undef
+  69:33  error  'next' is defined but never used  no-unused-vars
+
+? 3 problems (3 errors, 0 warnings)
+
+PS D:\Programming\gt\fibo_03\backend> npx eslint /routes
+
+Oops! Something went wrong! :(
+
+ESLint: 6.8.0.
+
+No files matching the pattern "/routes" were found.
+Please check for typing mistakes in the pattern.
+
+PS D:\Programming\gt\fibo_03\backend> npx eslint routes
+
+D:\Programming\gt\fibo_03\backend\routes\index.js
+  5:36  error  'next' is defined but never used  no-unused-vars
+
+D:\Programming\gt\fibo_03\backend\routes\number.js
+  25:13  error  'i' is not defined                   no-undef
+  25:20  error  'i' is not defined                   no-undef
+  25:27  error  'i' is not defined                   no-undef
+  32:6   error  Unnecessary semicolon                no-extra-semi
+  51:45  error  'results' is defined but never used  no-unused-vars
+
+D:\Programming\gt\fibo_03\backend\routes\sql.js
+   2:9   error  'UCS2_GENERAL_MYSQL500_CI' is assigned a value but never used  no-unused-vars
+   3:5   error  'router' is assigned a value but never used                    no-unused-vars
+  15:37  error  'res' is defined but never used                                no-unused-vars
+
+D:\Programming\gt\fibo_03\backend\routes\sqldata.js
+  5:10  error  'cors' is not defined  no-undef
+
+D:\Programming\gt\fibo_03\backend\routes\users.js
+  5:36  error  'next' is defined but never used  no-unused-vars
+
+? 11 problems (11 errors, 0 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+
+PS D:\Programming\gt\fibo_03\backend> npx eslint routes
+^CЗавершить выполнение пакетного файла [Y(да)/N(нет)]? y
+PS D:\Programming\gt\fibo_03\backend> npm start
+
+> backend@0.0.0 start D:\Programming\gt\fibo_03\backend
+
+
+
+
+
+
+
+
+module.exports = {
+  env: {
+    es6: true,
+  },
+  extends: [
+    'airbnb-base',
+  ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  parserOptions: {
+    ecmaVersion: 2018,
+  },
+  rules: {
+  },
+};

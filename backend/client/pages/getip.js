@@ -1,12 +1,11 @@
-import publicIp from '../node_modules/public-ip';
+import PublicIp from '../node_modules/public-ip';
 
-
-    async function getip() {
-        
-        var c = await publicIp.v4();
-        
-        return c;
-    }
-    
-export default getip;
+/** Get client ip 
+ * @return c - client IP
+*/
+async function Getip() {
+  const c = await PublicIp.v4();
+  return c;
+}
+export default Getip;
 

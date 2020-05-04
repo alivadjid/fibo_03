@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
-import axios from 'axios';
-import getip from './getip';
+import Axios from 'axios';
+import Getip from './getip';
 
-
+/** Show SQL data from client IP */
 class Sqldata extends Component {
   
   state = {
@@ -15,8 +15,8 @@ class Sqldata extends Component {
   
   
   getUsers = _ => {
-    getip().then(ip=> {
-        axios.get('http://localhost:3001/sqldata', {
+    Getip().then(ip=> {
+        Axios.get('http://localhost:3001/sqldata', {
           params: {
             ID: ip
           }
@@ -31,10 +31,10 @@ class Sqldata extends Component {
   })
   }
   showData = user => <div key={user.id}> {user.date} {user.ip} {user.number} {user.result}</div>;
-  render() {//building react method that comes inse od react component
+  render() {
     const  { users } = this.state;
     
-    return(//jsx code and can return only a single parent tag
+    return(
     
       
       <div className="App">
