@@ -25,10 +25,10 @@ app.use(function(req, res, next) {
 
 const mysql = require('mysql2');
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'sqlroot',
-  database: 'fibo-sql-data'
+  host: 'otwsl2e23jrxcqvx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  user: 'wufsruc9ohj8i8ye',
+  password: 'vo274g72msswd7ly',
+  database: 'bl1lr5n2mrys55le'
 });
 
 connection.connect(function(err){
