@@ -1,5 +1,5 @@
 # fibo_03
-Application calculate value from Fibbonachi line. Client input number, which he want to calculate.
+Application calculate value from Fibbonachi line. Client input number, which he want to calculate and see result.
 
 Application consists:
 Front: React
