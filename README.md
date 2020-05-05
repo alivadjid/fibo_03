@@ -14,15 +14,18 @@ Install applications:
 3. sudo apt install npm
 
 Clone git repository in folder:
+
 4. git clone https://github.com/alivadjid/fibo_03.git
 
 Install npm packages in backend and frontend:
+
 5. cd fibo_03/backend
 6. npm install
 7. cd fibo_03/backend/client
 8. npm install
 
 Start application:
+
 9. cd fibo_03/backend
 10. npm start
 11. cd fibo_03/backend/client
