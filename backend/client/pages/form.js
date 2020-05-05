@@ -30,7 +30,9 @@ class Form extends React.Component {
       var n = parseInt(number);
       if (isNaN(n)) {
         alert('Write a number!');
-      } else {   
+      } else if ( +number <= 0 ) {
+        alert('Remember! Fibbonachi line start from 1. Write correct number')
+      } else {
 
         /** Get client IP
         * @return {number} ip client IP
@@ -61,14 +63,14 @@ class Form extends React.Component {
     return (
       <form>
         <div className="form-group">
-          <label htmlFor="InputNumber">Write number</label>
+          <label htmlFor="InputNumber">Write number start from 1</label>
           <div className ="row">
             <div className="form-group col-xs-3">
               <input type="text" className="form-control" value={this.state.value} onChange={this.handleChange}></input>
             </div>
           </div> 
         </div>
-        <button type="submit" onClick={this.handleSubmit} className="btn btn-primary">Check</button>
+        <button type="submit" onClick={this.handleSubmit} className="btn btn-primary">Calc</button>
       </form>
     );
   }
