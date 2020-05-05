@@ -1,5 +1,5 @@
 # fibo_03
-Application calculate value from Fibbonachi line. In first page client input number. At the second page client see results.
+Application calculate value from Fibbonachi line. In first page client input number. At the second page client see results from MySQL.
 
 Application consists:
 
