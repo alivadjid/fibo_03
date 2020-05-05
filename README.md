@@ -27,7 +27,7 @@ Install npm packages in backend and frontend:
 7. cd fibo_03/backend/client
 8. npm install
 
-Start application:
+Open 2 terminal and start application:
 
 9. cd fibo_03/backend
 10. npm start
