@@ -2,8 +2,11 @@
 Application calculate value from Fibbonachi line. Client input number, which he want to calculate and see result.
 
 Application consists:
+
 Front: React
+
 Back: Nodejs
+
 Database: MySQL
 
 For run project in Linux:
