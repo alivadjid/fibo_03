@@ -1,5 +1,5 @@
 # fibo_03
-Application calculate value from Fibbonachi line. In first page client input number, which he want to calculate and see result. At the second page show results, which made client from his ip. 
+Application calculate value from Fibbonachi line. In first page client input number. At the second page client see results.
 
 Application consists:
 
