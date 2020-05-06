@@ -35,3 +35,6 @@ Open 2 terminal and start application:
 12. npm run dev
 
 See result in: localhost:3000
+
+To start test write
+npm test
