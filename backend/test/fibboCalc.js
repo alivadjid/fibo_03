@@ -1,21 +1,23 @@
 const chai = require('chai')
 const chaiHttp = require('chai-http')
-const server = require('../routes/number')
+const server = require('../app')
 
-chai.should()
+
 chai.use(chaiHttp)
+chai.should()
 
-
-describe('User permission', () => {
-  it('sets the user permissions', () => {
-    //Notice we are sending the request to the server export 
+describe('router.post', () => {
+ 
+  it('sets2', () => {
+    //sending the request to the server export 
     // of a URL
-    return chai.request(server)
-      .post('/')
-      .then(res => {
+    chai.request(server)
+      .post(`/number`, {
+        body: 5, 
+      }).then((res) => {
+        
         res.should.have.status(200);
-        console.log(res);
-        // add more tests here as you see fit
+        // 
       })
       .catch(err => {
         throw err
