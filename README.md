@@ -38,3 +38,7 @@ See result in: localhost:3000
 
 To start test write
 npm test
+
+application pushed to docker
+docker alivadjid/fibo-front:0.0.1
+docker alivadjid/fibo-back:0.0.1
