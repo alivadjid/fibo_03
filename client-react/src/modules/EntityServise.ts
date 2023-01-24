@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 
 export function numberHook(initValuve: number) {
   const [number, setNumber] = useState(initValuve);
