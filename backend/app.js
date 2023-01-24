@@ -6,7 +6,7 @@ var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-var htmlRoutes = require("./routes/number");
+var numberRouter = require("./routes/number");
 var cors = require("cors");
 var bodyParser = require("body-parser");
 var app = express();
@@ -34,6 +34,11 @@ const connection = mysql.createConnection({
   password: process.env.SQL_CONNECTION_PASSWORD,
   database: process.env.SQL_CONNECTION_DATABASE,
 });
+console.log(
+  "connection",
+  process.env.SQL_CONNECTION_HOST,
+  process.env.SQL_CONNECTION_USER
+);
 
 connection.connect(function (err) {
   err
@@ -56,7 +61,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/number", htmlRoutes);
+app.use("/number", numberRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
